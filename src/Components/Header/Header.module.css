@@ -1,0 +1,242 @@
+/* header part  */
+.header {
+  background: transparent;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(3px);
+  transition: background-color 0.4s ease;
+}
+.scrolled {
+  background-color: rgba(16, 15, 15, 0.8);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+.logo:hover {
+  opacity: 0.8;
+}
+/* nav section */
+.nav {
+  display: flex;
+  /* align-items: center; */
+  gap: 20px;
+  text-align: center;
+  flex: 1;
+}
+.navLink {
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.navLink:hover {
+  color: #b3b3b0;
+}
+/* right side section */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchButton {
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  justify-content: center;
+  padding: 4px;
+}
+
+.searchButton:hover {
+  color: #b3b3b0;
+}
+.searchInput {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f5f5f1;
+  font-size: 14px;
+  width: 200px;
+}
+.searchInput::placeholder {
+  color: hsl(60, 2%, 70%);
+}
+.searchInput:focus {
+  outline: none;
+  background-color: rgba(17, 17, 17, 0.2);
+}
+.iconButton {
+  position: relative;
+  background: none;
+  border: none;
+  color: #f5f5f1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+.iconButton:hover {
+  color: #b3b3b0;
+}
+.notificationBadge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+.profileContainer {
+  position: relative;
+}
+.profileButton {
+  background: none;
+  border: none;
+  color: #f5f5f1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  justify-content: center;
+  border-radius: 4px;
+}
+.profileButton:hover {
+  color: #b3b3b0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f1;
+  font-size: 14px;
+}
+
+.profileMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  animation: slideDown 0.2s ease;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ProfileMenuItem {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  color: #f5f5f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.ProfileMenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+    gap: 24px;
+  }
+  .nav {
+    gap: 16px;
+  }
+  .navLink {
+    font-size: 13px;
+  }
+
+  .searchInput {
+    width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+    gap: 16px;
+  }
+  .nav {
+    display: none;
+  }
+  .logo {
+    width: 80px;
+  }
+  .searchInput {
+    width: 120px;
+  }
+
+  .rightSection {
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  .logo {
+    width: 70px;
+  }
+  .searchInput {
+    width: 100px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .rightSection {
+    gap: 12px;
+  }
+}

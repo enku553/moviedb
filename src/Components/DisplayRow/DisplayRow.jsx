@@ -31,6 +31,7 @@ function DisplayRow() {
         horrorRes,
         romanceRes,
         documentariesRes,
+        //Runs ALL API requests at the same time.
       ] = await Promise.all([
         movieInstance.get(requests.fetchTrending),
         movieInstance.get(requests.fetchNetflixOriginals),

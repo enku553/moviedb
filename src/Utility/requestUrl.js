@@ -1,7 +1,7 @@
 // const API_KEY = "9b138eecf75c265f9bced99ed90e4124";
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // gets the TMDB API key from the .env
 
-
+// stores all movie API URLs.
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
